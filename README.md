@@ -116,3 +116,14 @@ $mecaniciens = $requete->fetchAll();
     <?php endforeach; ?>
 </body>
 </html>
+CREATE TABLE mecaniciens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    emplacement VARCHAR(255) NOT NULL,
+    specialite VARCHAR(255) NOT NULL,
+    description TEXT,
+    tarif_horaire DECIMAL(10, 2) NOT NULL,
+    photo VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
